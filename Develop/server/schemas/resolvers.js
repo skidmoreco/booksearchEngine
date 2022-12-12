@@ -9,7 +9,8 @@ const resolver = {
         },
         user: async (parent, {username}) => {
             return User.findOne({ username }).populate('books');
-        }
+        },
+
     },
 
     Mutation: {
@@ -33,10 +34,11 @@ const resolver = {
 
             return { token, user };
         },
-        saveBook: async (parent, { title, author}, context) => {
+        saveBook: async (parent, { user, body }, context) => {
             if (context.book) {
-                
+                 
             }
+                
         }
-    }
+    },
 }
