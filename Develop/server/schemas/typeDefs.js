@@ -9,8 +9,8 @@ type User {
     savedBooks: [Book]!
 }
 type Book {
-    bookId: [ID]!
-    authors: String
+    bookId: String
+    authors: [String]
     description: String
     title: String
     image: String
@@ -23,23 +23,15 @@ type Auth {
 
 type Query {
     me: User
+    users: [User]!
+    user(userId: ID!): User
 }
 
 type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    saveBook(author: [author], description: String!, title: String!, bookId: String!, image: String!)
-}
+    saveBook(userId: ID!, bookId: String!): User
+    removeBook(book: String!): User
+}`;
 
-
-
-
-
-
-
-
-
-
-
-
-`
+module.exports = typeDefs;
