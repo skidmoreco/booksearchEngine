@@ -5,9 +5,6 @@ import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
-const httpLink = createHttpLink({
-  uri: '/graphql',
-});
 
 
 const authLink = setContext((_, { headers }) => {
