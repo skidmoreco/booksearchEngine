@@ -1,25 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import SearchBooks from './pages/SearchBooks';
 import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
-
-
-const authLink = setContext((_, { headers }) => {
-
-    const token = localStorage.getitem('id_token');
-    return {
-      headers: {
-        ...headers,
-        authorization: token ? `Bearer ${token}` : '',
-      },
-    };
-});
 
 const client = new ApolloClient({
-  link: authLink.concact(httpLink),
+  uri: '/graphql',
   cache: new InMemoryCache(),
 });
 
