@@ -47,8 +47,8 @@ THEN I am logged out of the site and presented with a menu with the options Sear
 
 ## Live Site: 
 ---
-[GitHub pages](https://github.com/skidmoreco/socialnetworkAPI)
-[Google Drive Link](https://drive.google.com/file/d/1CCYI0ITm4UY7gQSzDi_HsGwdofUOOGZI/view)
+[GitHub pages](https://github.com/skidmoreco/booksearchEngine)
+[Heroku Link](https://drive.google.com/file/d/1CCYI0ITm4UY7gQSzDi_HsGwdofUOOGZI/view)
 
 
 ## LICENSE:
